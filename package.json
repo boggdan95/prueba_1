@@ -1,0 +1,26 @@
+{
+  "name": "express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boggdan95/prueba_1.git"
+  },
+  "author": "Boggdan Barrientos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/boggdan95/prueba_1/issues"
+  },
+  "homepage": "https://github.com/boggdan95/prueba_1#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "path": "^0.12.7"
+  }
+}
