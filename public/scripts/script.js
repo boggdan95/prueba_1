@@ -6,11 +6,6 @@ function athlete(nombre,apellido,edad){
   this.edad = edad;
 }
 
-//Regresar a la página anterior
-function return() {
-    window.history.back();
-}
-
 function startTrainning() {
 
 }
