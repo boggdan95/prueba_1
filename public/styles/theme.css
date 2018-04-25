@@ -45,6 +45,26 @@ html, body {
   text-decoration: none;
 }
 
+.btn_return {
+  background: #e23f36;
+  display: inline-block;
+  margin: auto;
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Courier New;
+  color: #ffffff;
+  font-size: 26px;
+  position: relative;
+  border: solid #000000 3px;
+  padding: 13px 40px 11px 40px;
+}
+
+.btn_return:hover{
+  background: #f96868;
+  text-decoration: none;
+}
+
 .b {
   position: relative;
   padding-top: 10px;
@@ -121,7 +141,7 @@ $bkBtnSize: 52px;
     width: 0;
     height: 0;
     border-top: $bkBtnSize*0.25 solid transparent;
-    border-bottom: $bkBtnSize*0.25 solid transparent; 
+    border-bottom: $bkBtnSize*0.25 solid transparent;
     border-right: $bkBtnSize*0.25 solid white;
   }
   .bk-btn-bar {
