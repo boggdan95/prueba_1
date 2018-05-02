@@ -1,3 +1,5 @@
+var socket = io();
+
 var nombre, apellido, edad, tipoEntrenamiento, tiempoEntrenamiento, modulosEntrenamiento, moduloColor;
 
 function athlete(nombre,apellido,edad){
@@ -6,8 +8,12 @@ function athlete(nombre,apellido,edad){
   this.edad = edad;
 }
 
-function startTrainning() {
 
+function startTrainning() {
+  typeOfTrainning();
+  var entrenamiento = { "Reaccion":tipoEntrenamiento, "Tiempo":tiempoEntrenamiento, "Modulo":modulosEntrenamiento};
+  var myJSON = JSON.stringify(entrenamiento);
+  socket.emit("designTrainnig",myJSON);
 }
 
 
@@ -85,7 +91,9 @@ function colorSelect() {
   if (document.getElementById("rdbtn2").checked) {
     moduloColor = "red";
   }
-  if (document.getElementById("rdbtn3").checked) {
+  if (document.getElementById("rdbtn3").checked
+
+) {
     moduloColor = "green";
   }
 

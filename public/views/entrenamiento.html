@@ -6,6 +6,7 @@
 
     <link rel="stylesheet" type="text/css" href="../styles/theme_train.css">
     <link rel="stylesheet" type="text/css" href="../styles/theme.css">
+    <script src="/socket.io/socket.io.js"></script>
     <script type="text/javascript" src="../scripts/script.js"></script>
 </head>
 <body>
@@ -41,7 +42,7 @@
              </div>
                 <div class="subcontent">
                     <button class="btn_return" onclick="history.back()">Regresar</button>
-                    <button id="btn_train" onclick="typeOfTrainning()">Iniciar</button>
+                    <a href="resultadosEntrenamiento.html"><button id="btn_train" onclick="startTrainning()">Iniciar</button></a>
                 </div>
         </div>
         <div id="footer">
@@ -52,5 +53,6 @@
             </ul>
             </div>
         </div>
+
 </body>
 </html>
