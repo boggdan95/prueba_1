@@ -30,12 +30,13 @@ window.onload = function(){
      if (seconds <= 00 && minutes <= 0) {
        clearInterval(x);
        document.getElementById("timer").innerHTML = "Entrenamiento finalizado";
+       //Creacion de boton de retorno cuando el entreno ha finalizado
         myButton = document.createElement("input");
         myButton.type = "button";
-        myButton.value = "Regresar";
-        myButton.className = "btn_return";
-        myButton.onclick = function () {history.back();};
-       document.getElementById("backPanel").appendChild(myButton);
+        myButton.value = "Regresar"; //texto del boton
+        myButton.className = "btn_return"; //clase de estilo del boton
+        myButton.onclick = function () {history.back();}; //funcion del boton
+       document.getElementById("backPanel").appendChild(myButton); //agregado al panel
      }
 
    },1000);
