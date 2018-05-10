@@ -15,6 +15,7 @@
         <p class="text1">USUARIO, diseña el entrenamiento</p>
     </div >
         <div id="content">
+          <form action="/entrenamientoPersonalizado" method="post">
             <div>
                 <p class="text1">Modo de tiempo de reacción</p>
                 <select name="Reaccion" id="reaccion" class="drop_menu">
@@ -41,9 +42,10 @@
                 </select>
              </div>
                 <div class="subcontent">
-                    <button class="btn_return" onclick="history.back()">Regresar</button>
-                    <a href="resultadosEntrenamiento.html"><button id="btn_train" onclick="startTrainning()">Iniciar</button></a>
+                    <a href="homepage.html"><button type="button" class="btn_return">Regresar</button></a>
+                    <input type="submit" id="btn_train" onclick="startTrainning()" value="Iniciar">
                 </div>
+          </form>
         </div>
         <div id="footer">
             <ul>

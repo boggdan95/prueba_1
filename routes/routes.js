@@ -28,8 +28,29 @@ module.exports = (app, passport) => {
     failureFlash: true
   }));
 
-  app.get('/homepage', isLoggedIn ,(req,res) => {
+  app.get('/homepage', isLoggedIn, (req,res) => {
     res.sendFile('views/homepage.html', {"root": __dirname + '/../public/'});
+  });
+
+  app.get('/homepage.html', isLoggedIn, (req,res) => {
+    res.sendFile('views/homepage.html', {"root": __dirname + '/../public/'});
+  });
+
+  app.get('/entrenamiento.html', isLoggedIn, (req,res) => {
+    res.sendFile('views/entrenamiento.html', {"root": __dirname + '/../public/'});
+  });
+
+  app.post('/entrenamientoPersonalizado', (req, res) => {
+      console.log(req.body);
+      res.sendFile('views/resultadosEntrenamiento.html', {"root": __dirname + '/../public/'});
+  });
+
+  app.get('/games.html', isLoggedIn, (req,res) => {
+    res.sendFile('views/games.html', {"root": __dirname + '/../public/'});
+  });
+
+  app.get('/config.html', isLoggedIn, (req,res) => {
+    res.sendFile('views/config.html', {"root": __dirname + '/../public/'});
   });
 
   app.get('/logout', (req, res) => {
@@ -43,6 +64,5 @@ function isLoggedIn (req, res, next) {
 	if (req.isAuthenticated()) {
 		return next();
 	}
-
 	res.redirect('/');
 }
