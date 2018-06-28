@@ -1,4 +1,4 @@
-module.exports = (app, passport) => {
+module.exports = (app, passport, actions, User) => {
 
   app.get('/',(req,res) => {
     res.sendFile('index.html', {"root": __dirname + '/../public/'});
@@ -10,11 +10,10 @@ module.exports = (app, passport) => {
     });
   });
 
-  app.post('/login', passport.authenticate('login', {
-    successRedirect: '/homepage',
-    failuredRedirect: '/login',
-    failureFlash: true
-  }));
+  app.post('/login',passport.authenticate('login',
+    { successRedirect: '/homepage',
+      failureRedirect: '/login' })
+  );
 
   app.get('/register', (req,res) => {
     res.sendFile('register.html', {"root": __dirname + '/../public/'} ,{
@@ -28,8 +27,9 @@ module.exports = (app, passport) => {
     failureFlash: true
   }));
 
-  app.get('/homepage', isLoggedIn, (req,res) => {
+  app.get('/homepage', isLoggedIn,(req,res) => {
     res.sendFile('views/homepage.html', {"root": __dirname + '/../public/'});
+
   });
 
   app.get('/homepage.html', isLoggedIn, (req,res) => {
@@ -40,7 +40,8 @@ module.exports = (app, passport) => {
     res.sendFile('views/entrenamiento.html', {"root": __dirname + '/../public/'});
   });
 
-  app.post('/entrenamientoPersonalizado', (req, res) => {
+  app.post('/entrenamientoPersonalizado.html', (req, res) => {
+
       console.log(req.body);
       res.sendFile('views/resultadosEntrenamiento.html', {"root": __dirname + '/../public/'});
   });

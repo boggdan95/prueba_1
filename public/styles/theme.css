@@ -138,6 +138,13 @@ html, body {
   padding-bottom: 10px;
 }
 
+#btn_logout {
+  float: right;
+  margin-top: 20px;
+  margin-right: 10px;
+  color
+}
+
 .title {
  font-family: 'Helvetica', 'Verdana', sans-serif;
  text-shadow:1px 1px 1px rgba(255,255,214,1);
